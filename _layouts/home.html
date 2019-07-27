@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{{ content }}
+
+
+
+    {% assign pages_list = site.html_pages | sort:"nav_order" %}
+    {% for node in pages_list %}
+        {% if node.parent == nil %}
+
+            <a href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+            <br>
+
+        {% endif %}
+    {% endfor %}
+
