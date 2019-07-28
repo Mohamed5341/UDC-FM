@@ -6,9 +6,9 @@ nav_order: 3
 ---
 
 From Datasheet:
-{% include image.html url="/assets/bmp180_algorithm.jpg" description="Sensor Algorithm" %}
+{% include image.html url="/assets/bmp180_algorithm.JPG" description="Sensor Algorithm" %}
 The steps in this figure are the algorithm for getting Pressure and Temperature from sensor. First you need to read some data from sensor then do some calculations to these data to get Pressure and temperature. 
-{% include image.html url="/assets/bmp180_algorithm_steps.jpg" description="Sensor Algorithm in details" %}
+{% include image.html url="/assets/bmp180_algorithm_steps.JPG" description="Sensor Algorithm in details" %}
 
 
 

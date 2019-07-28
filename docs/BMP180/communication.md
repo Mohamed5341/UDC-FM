@@ -64,7 +64,7 @@ Now lets see how Tiva C work with I2C, Tiva C has 4 I2C modules, each module can
 
 <br>
 * You can enable clock to I2C module using **RCGCI2C** register
-{% include image.html url="/assets/rcgci2c_reg.jpg" description="RCGCI2C register" %}
+{% include image.html url="/assets/rcgci2c_reg.JPG" description="RCGCI2C register" %}
 each bit controls clock for I2C module
 
 <dl>
@@ -80,7 +80,7 @@ each bit controls clock for I2C module
 
 <br>
 * you can configure clock speed using **I2CMTPR** register
-{% include image.html url="/assets/i2cmtpr_reg.jpg" description="I2CMTPR register" %}
+{% include image.html url="/assets/i2cmtpr_reg.JPG" description="I2CMTPR register" %}
 
 <dl>
 	<dt>HS</dt>
@@ -99,7 +99,7 @@ each bit controls clock for I2C module
 
 <br>
 * You can select operating mode (master or slave) using **I2CMCR** register
-{% include image.html url="/assets/i2cmcr_reg.jpg" description="I2CMCR register" %}
+{% include image.html url="/assets/i2cmcr_reg.JPG" description="I2CMCR register" %}
 
 <dl>
 	<dt>MFE</dt>
@@ -111,7 +111,7 @@ each bit controls clock for I2C module
 
 <br>
 * You can write slave address you want to communicate with using **I2CMSA** register 
-{% include image.html url="/assets/i2cmsa_reg.jpg" description="I2CMSA register" %}
+{% include image.html url="/assets/i2cmsa_reg.JPG" description="I2CMSA register" %}
 
 <dl>
 	<dt>SA</dt>
@@ -124,7 +124,7 @@ each bit controls clock for I2C module
 <br>
 * You can start end communication and also see communication status using **I2CMCS** register
 this one is two registers one for read and the other for write
-{% include image.html url="/assets/i2cmcs_reg_ro.jpg" description="I2CMCS register for read only" %}
+{% include image.html url="/assets/i2cmcs_reg_ro.JPG" description="I2CMCS register for read only" %}
 <dl>
 	<dt>BUSBSY</dt><dd>this bit is 1 if bus is busy and it is 0 if bus is free</dd>
 	<dt>IDLE</dt><dd>I2C device is IDLE (maens it is ready for communication) if it is 1 and it is not IDLE if it is 0</dd>
@@ -135,7 +135,7 @@ this one is two registers one for read and the other for write
 	<dt>BUSY</dt><dd>if it is 1 the controller is busy and if it is 0 the controller is idle</dd>
 
 </dl>
-{% include image.html url="/assets/i2cmcs_reg_wo.jpg" description="I2CMCS register for write only" %}
+{% include image.html url="/assets/i2cmcs_reg_wo.JPG" description="I2CMCS register for write only" %}
 <dl>
 	<dt>HS</dt><dd>High Speed enable if this bit is set high speed mode enabled and if it is clear high speed mode is disabled</dd>
 	<dt>ACK</dt><dd>Acknowledge if this bit is set (1) ACK bit will be sent and if it is clear (0) NACK will be sent</dd>
@@ -146,7 +146,7 @@ this one is two registers one for read and the other for write
 
 <br>
 * You can read and write data you send and receive using **I2CMDR** register
-{% include image.html url="/assets/i2cmdr_reg.jpg" description="I2CMDR registery" %}
+{% include image.html url="/assets/i2cmdr_reg.JPG" description="I2CMDR registery" %}
 you can write data in bits 7:0
 
 

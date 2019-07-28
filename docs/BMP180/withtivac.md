@@ -16,24 +16,24 @@ Second, lets configure I2C1 module:
 * Enable clock to module using **RCGCI2C** register. write the value 0x00000002 
 {% include image.html url="/assets/rcgci2c_reg_en1.jpg" description="RCGCI2C register" %}
 * Enable clock to I2C pins (in our case PA6,PA7), but we enable clock to port not pins so we enable clock to port A using **RCGCGPIO** register. write value 0x00000001
-{% include image.html url="/assets/rcgcgpio_reg_en0.jpg" description="RCGCGPIO register" %}
+{% include image.html url="/assets/rcgcgpio_reg_en0.JPG" description="RCGCGPIO register" %}
 * Select pins for alternate function using **GPIOAFSEL** register, write the value 0x000000C0
-{% include image.html url="/assets/gpioafsel_reg_en67.jpg" description="RCGCAFSEL register" %}
+{% include image.html url="/assets/gpioafsel_reg_en67.JPG" description="RCGCAFSEL register" %}
 * Choose the other function type using **GPIOPCTL** register, write value 0x33000000
-{% include image.html url="/assets/gpiopctl_reg_eni2c.jpg" description="GPIOPCTL register" %}
+{% include image.html url="/assets/gpiopctl_reg_eni2c.JPG" description="GPIOPCTL register" %}
 
 Be Careful
 {: .label .label-red}
 Make sure you first clear bits 31:24 then write the value.
 * Enable digital function to pins using **RCGCDEN** register, write the value 0x000000C0
-{% include image.html url="/assets/gpioden_reg_en67.jpg" description="RCGCDEN register" %}
+{% include image.html url="/assets/gpioden_reg_en67.JPG" description="RCGCDEN register" %}
 * Enable open-drain to data pin (in our case PA7) using **GPIOODR** register, write the value 0x00000080
-{% include image.html url="/assets/gpioodr_reg_en7.jpg" description="GPIOODR register" %}
+{% include image.html url="/assets/gpioodr_reg_en7.JPG" description="GPIOODR register" %}
 * Configure TivaC as Master using **I2CMCR** register, write value 0x00000010
-{% include image.html url="/assets/i2cmcr_reg_mfe.jpg" description="I2CMCR register" %}
+{% include image.html url="/assets/i2cmcr_reg_mfe.JPG" description="I2CMCR register" %}
 * Set clock speed using **I2CMTPR** register, write value 0x00000007 this value is calculated from relation:
 <span>$$TPR=\frac{clockfreq}{20 * I2Cclock}-1=\frac{16MHz}{20 * 100Kbps}-1=\frac{16000000}{20 * 100000}-1=7$$</span>
-{% include image.html url="/assets/i2cmtpr_reg_7.jpg" description="I2CMTPR register" %}
+{% include image.html url="/assets/i2cmtpr_reg_7.JPG" description="I2CMTPR register" %}
 this was the initialization of I2C module now lets begin with sensor:
 * We need to read some data (AC1,AC2,...) from some registers in BMP180 each one is 16 bits (you can get it reading from 2 registers)
 
