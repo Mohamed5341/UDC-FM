@@ -10,8 +10,10 @@ layout: default
     {% for node in pages_list %}
         {% if node.parent == nil %}
 
-            <a href="{{ node.url | absolute_url }}">{{ node.title }}</a>
-            <br>
+        	{% if node.nav_exclude != true %}
+	            <a href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+	            <br>
+            {% endif %}
 
         {% endif %}
     {% endfor %}

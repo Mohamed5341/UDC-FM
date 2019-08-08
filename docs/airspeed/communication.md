@@ -51,11 +51,17 @@ clear INx bit.
 {% include image.html url="/assets/adcssctl12_reg.JPG" description="ADCSSCTL1 & ADCSSCTL2 registers" %}
 {% include image.html url="/assets/adcssctl3_reg.JPG" description="ADCSSCTL3 register" %}
 each 4 bits corresponds to sample number (D0,END0,IE0,TS0 configures first sample).
+<dl>
+	<dt>D0</dt>
+	<dd>if it is 0 this means single endded (raed from one sensor)<br>if it is 1 this means differnetial (get the difference between two signals from 2 pins)</dd>
+	<dt>END0</dt>
+	<dd>if it is 0 this means you get more than one sample <br> if it is 1 this means you get only one sample</dd>
+	<dt>IE0</dt>
+	<dd>if it is 0 this means no interrupt would happen after conversion end <br> if it is 1 this means that interrupt happens and the flag is changed</dd>
+	<dt>TS0</dt>
+	<dd>if it is 0 this means you read from input channels<br>if it is 1 this means you read from internal temperature sensor</dd>
+</dl>
 * You can enable intterupt using **ADCIM** register
 {% include image.html url="/assets/adcim_reg.JPG" description="ADCIM register" %}
 if MASKx is 1 this means that sample sequencer number x is going to make intterupt to controller and if it is 0 the sample sequencer is not going to send interrupt and it just going to change the flag.
-
-
-
-
 
